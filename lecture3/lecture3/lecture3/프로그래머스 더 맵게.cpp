@@ -25,7 +25,8 @@ int solution(vector<int> scoville, int K) {
 
     priority_queue<int, vector<int>, greater<int>> pq; // greater를 이용하여 낮은값 부터 나오게 하기.
 
-    for (int i = 0; i < scoville.size(); i++) {
+    for (int i = 0; i < scoville.size(); i++) 
+    {
         pq.push(scoville[i]);                           // scoville 값 복사 우선순위 큐에 복사
     }
 
@@ -46,14 +47,11 @@ int solution(vector<int> scoville, int K) {
 
         answer++;                                       // 섞었다면 answer ++;
 
-
     }
 
     if (pq.top() < K) {
         answer = -1;
     }
-
-
 
     return answer;
 }

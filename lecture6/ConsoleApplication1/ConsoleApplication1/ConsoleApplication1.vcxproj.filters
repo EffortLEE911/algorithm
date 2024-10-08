@@ -30,5 +30,8 @@
     <ClCompile Include="(깊이우선)배열에서 목표찾기.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="project.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

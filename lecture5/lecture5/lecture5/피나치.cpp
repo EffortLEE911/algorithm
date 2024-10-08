@@ -12,8 +12,6 @@ int main()
     cout << "fibo (" << n << ") 의 값은"<<  endl;
     cout << a << endl;
 
-    
-
 }
 
 int fibo(int n) {
@@ -26,8 +24,6 @@ int fibo(int n) {
     }
     else
         return fibo(n - 1) + fibo(n - 2);
-
-
 
 
 }
