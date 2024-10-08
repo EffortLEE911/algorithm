@@ -7,24 +7,9 @@ using namespace std;
 
 int main()
 {
-    vector<int> vec;
+    vector<int> vec = { 5, 1, 6, 4, 2,3 };
 
-    vec.push_back(5);
-    vec.push_back(1);
-    vec.push_back(6);
-    vec.push_back(4);
-    vec.push_back(2);
-    vec.push_back(3);
-
-
-    cout << "초기값" << endl;
-    for (int i = 0; i < vec.size(); i++) {
-        cout << vec[i] << ' ';
-    }
-    cout << endl << endl;
-
-
-    int tmp; // temporaray 일시적인
+    int tmp; // temporaray 일시적인, 임시값을 저장하기 위한 변수
 
     for (int k = vec.size() - 1; k > 0; k--)/// vec.size() - 1에 주의, 책에서는 for(int k=0; k<vec.size()-1; k++)
                                             ///                                  for(int i=0; i<vec.size() - (k+1); i++) 이렇게 구현
@@ -36,9 +21,11 @@ int main()
 
             if (vec[i] > vec[i + 1])
             {
-                tmp = vec[i + 1];
+
+                tmp = vec[i + 1];       // 임시값을 저장하기 위한 변수에 값을 집어 넣어 놓는다.
                 vec[i + 1] = vec[i];
                 vec[i] = tmp;
+
 
             }
 

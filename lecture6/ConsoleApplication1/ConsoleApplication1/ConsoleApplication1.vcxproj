@@ -136,9 +136,11 @@
     <ClCompile Include="(BFS)백준_바이러스_제출용.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="(깊이우선)배열에서 목표찾기.cpp" />
-    <ClCompile Include="%28너비우선%29배열에서 목표찾기.cpp">
+    <ClCompile Include="(깊이우선)배열에서 목표찾기.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="%28너비우선%29배열에서 목표찾기.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClCompile>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

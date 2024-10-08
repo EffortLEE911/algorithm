@@ -17,10 +17,7 @@ int main() {
 
 	}
 	//arr[7] = 0; //사과를 먹지 못할 경우 만들기.
-
-	int d_x[2] = { -1, +1 }; // 좌 우 이동 
-
-
+ 
 	int dinosaur = 3;
 	int apple = 8;
 

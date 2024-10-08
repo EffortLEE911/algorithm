@@ -5,6 +5,7 @@
 using namespace std;
 int arr[9]; // 길
 int visited[9]; // 방문 표시
+bool is_arrive = false;
 
 
 int main() {
@@ -22,8 +23,6 @@ int main() {
 
 	int dinosaur = 3;
 	int apple = 8;
-	bool is_arrive = false;
-	
 
 	q.push(dinosaur);
 	visited[dinosaur] = 1;
@@ -35,10 +34,7 @@ int main() {
 
 
 		dinosaur = q.front();
-		if (dinosaur == apple) {
-			is_arrive = true;
-			break;
-		}
+
 		q.pop();
 
 		cout << "현재 공룡의 위치는 " << dinosaur << endl;
@@ -47,7 +43,8 @@ int main() {
 			next_x = dinosaur + d_x[i];
 
 			if (next_x >= 0 && next_x <= 8) {	//다음 이동범위가 배열 안에 존재할 수 있는가 체크
-				if (visited[next_x] == 0 && arr[next_x] == 1) {	//다음 이동이 방문하지 않았고, 길이 연결되어 있는가 체크
+				if (visited[next_x] == 0 && arr[next_x] == 1) {	//다음 이동이 방문하지 않았고,
+																//길이 연결되어 있는가 체크
 					q.push(next_x);
 					visited[next_x] = 1;
 					cout << "값이 q에 들어갔습니다 : " << next_x << endl;
@@ -65,8 +62,5 @@ int main() {
 		cout << "공룡이 사과를 먹지 못했습니다" << endl;
 	}
 	
-
-
-
 
 }
