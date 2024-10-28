@@ -18,7 +18,7 @@ int main()
 
     for (int i = 0; i < phone_book.size(); i++) // hash의 key값에 phone_book 넣기
     {
-        hash[phone_book[i]] = 1;
+        hash{ phone_book[i] } = 1;
     }
 
     for (int i = 0; i < phone_book.size(); i++) {
