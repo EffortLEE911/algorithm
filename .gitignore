@@ -396,10 +396,10 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
-lecture5/lecture5/lecture5/N과M.cpp
-lecture5/lecture5/lecture5/test.cpp
-lecture6/ConsoleApplication1/ConsoleApplication1/project.cpp
-lecture6/ConsoleApplication1/ConsoleApplication1/test.cpp
-lecture4/lecture4/lecture4/test12.cpp
-lecture4/lecture4/lecture4/test11.cpp
-lecture4/lecture4/lecture4/test3cpp.cpp
+lecture05/lecture5/lecture5/N과M.cpp
+lecture05/lecture5/lecture5/test.cpp
+lecture06/ConsoleApplication1/ConsoleApplication1/project.cpp
+lecture06/ConsoleApplication1/ConsoleApplication1/test.cpp
+lecture04/lecture4/lecture4/test12.cpp
+lecture04/lecture4/lecture4/test11.cpp
+lecture04/lecture4/lecture4/test3cpp.cpp
