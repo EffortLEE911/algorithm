@@ -15,7 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="백준 최단 경로cpp.cpp">
+    <ClCompile Include="백준 최단 경로.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ppt연습문제%28우선순위queue%29.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

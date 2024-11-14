@@ -30,7 +30,7 @@ int main() {
 	//==================================================================
 
 
-	// ===============테스트===========
+	//// ===============테스트===========
 	// 
 	//arr[5].push_back({ 1,1 });
 	//arr[1].push_back({ 2,2 });
@@ -38,13 +38,13 @@ int main() {
 	//arr[2].push_back({ 3, 4 });
 	//arr[2].push_back({ 4, 5 });
 	//arr[3].push_back({ 4, 6 });
-	//==============================
+	////==============================
 
 	for (int i = 1; i <= V; i++) {
 		d[i] = INF;
 	}
 
-	priority_queue<pair<int, int>> pq;
+	priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;
 
 	pq.push({ 0, K });
 	d[K] = 0;
@@ -54,10 +54,15 @@ int main() {
 
 	while (!pq.empty()) {
 
-		cur_cost = -pq.top().first;
+		cur_cost = pq.top().first;
 		cur_pos = pq.top().second;
 
 		pq.pop();
+
+		if (cur_cost > d[cur_pos])
+		{
+			continue;
+		}
 
 
 		for (int i = 0; i < arr[cur_pos].size(); i++)
@@ -68,7 +73,7 @@ int main() {
 			if (cur_cost + next_cost < d[next_pos])
 			{
 				d[next_pos] = cur_cost + next_cost;
-				pq.push({ -d[next_pos], next_pos });
+				pq.push({ d[next_pos], next_pos });
 			}
 		}
 	}
