@@ -25,26 +25,27 @@ int main() {
 
 	for (int i = 0; i < E; i++) {
 		cin >> a >> b >> cost;
-		arr[a].push_back({ b,cost });
+		arr[a].push_back({ cost,b });
 	}
 	//==================================================================
 
 
-	// ===============테스트===========
+	//// ===============테스트===========
 	// 
 	//arr[5].push_back({ 1,1 });
 	//arr[1].push_back({ 2,2 });
 	//arr[1].push_back({ 3,3 });
-	//arr[2].push_back({ 3, 4 });
-	//arr[2].push_back({ 4, 5 });
-	//arr[3].push_back({ 4, 6 });
-	//==============================
+	//arr[2].push_back({ 4, 3 });
+	//arr[2].push_back({ 5, 4 });
+	//arr[3].push_back({ 6, 4 });
+	////==============================
 
 	for (int i = 1; i <= V; i++) {
 		d[i] = INF;
 	}
 
-	priority_queue<pair<int, int>> pq;
+	//우선순위 queue, 값이 낮은 순서대로 저장.
+	priority_queue<pair<int, int>, vector<pair<int,int>>, greater<pair<int,int>>> pq;
 
 	pq.push({ 0, K });
 	d[K] = 0;
@@ -52,9 +53,9 @@ int main() {
 	int cur_cost=0;
 	int cur_pos=0;
 
-	while (!pq.empty()) {
-
-		cur_cost = -pq.top().first;
+	while (!pq.empty())
+	{
+		cur_cost = pq.top().first;
 		cur_pos = pq.top().second;
 
 		pq.pop();
@@ -62,16 +63,19 @@ int main() {
 
 		for (int i = 0; i < arr[cur_pos].size(); i++)
 		{
-			int next_cost = arr[cur_pos][i].second;
-			int next_pos = arr[cur_pos][i].first;
 
-			if (cur_cost + next_cost < d[next_pos])
+			int next_cost = arr[cur_pos][i].first;
+			int next_pos = arr[cur_pos][i].second;
+
+			//기존값 > 현재 비용 + 다음 이동 비용
+			if (d[next_pos] >cur_cost + next_cost )
 			{
 				d[next_pos] = cur_cost + next_cost;
-				pq.push({ -d[next_pos], next_pos });
+				pq.push({ d[next_pos], next_pos });
 			}
 		}
 	}
+	
 
 	for (int i = 1; i <= V; i++) {
 		if (d[i] == INF) {
