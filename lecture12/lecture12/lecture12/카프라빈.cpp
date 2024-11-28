@@ -2,6 +2,8 @@
 
 using namespace std;
 
+const int MOD = 1000000007;
+
 int main()
 {
 
@@ -23,7 +25,6 @@ int main()
 
     // target의 hash값과 parent의 hash값 동시에 구하기. 아래 수식의 t는 target의 약자.
     // t[0] * 2^4 + t[1] * 2^3 + t[2] * 2^2 + t[3] * 2^1 + t[4] * 2^0;
-    int tmp = 0;
 
 
     for (int i = 0; i <= parent.size() - target.size(); i++)
@@ -33,15 +34,15 @@ int main()
             for (int j = 0; j < target.size(); j++)
             {
 
-                target_hash = target_hash + target[j] * pow;
-                parent_hash = parent_hash + parent[j] * pow;
+                target_hash = (target_hash + target[j] * pow) % MOD;
+                parent_hash = (parent_hash + parent[j] * pow) % MOD;
                 pow = pow / 2;
 
             }
             
         }
         else {
-            parent_hash = 2 * (parent_hash - parent[i - 1] * pow_or) + parent[target.size() - 1 + i];
+            parent_hash = (2 * (parent_hash - parent[i - 1] * pow_or) + parent[target.size() - 1 + i]) % MOD;
         }
  
         if (parent_hash == target_hash)
