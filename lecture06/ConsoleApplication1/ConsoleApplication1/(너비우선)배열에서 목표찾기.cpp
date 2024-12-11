@@ -38,6 +38,9 @@ int main() {
 		q.pop();
 
 		cout << "현재 공룡의 위치는 " << dinosaur << endl;
+		if (dinosaur == apple) {
+			is_arrive = true;
+		}
 
 		for (int i = 0; i < 2; i++) {  // 2는 d_x의 크기
 			next_x = dinosaur + d_x[i];

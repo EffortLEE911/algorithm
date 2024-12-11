@@ -6,7 +6,7 @@ using namespace std;
 
 int parent[1001];
 
-int find_union(int parent[], int n)
+int find_union(int parent[], int n) // 자신이 속한 집합의 대표 원소를 찾는 연산.
 {
     if (parent[n] == n)
         return n;
@@ -14,9 +14,12 @@ int find_union(int parent[], int n)
     parent[n] = find_union(parent, parent[n]);
     return parent[n];
 
+
 }
 
-void make_union(int parent[], int n, int m)
+
+
+void make_union(int parent[], int n, int m) // 두개의 정점을 집합으로 연결하기 위한 연산.
 {
     int a = find_union(parent, n);
     int b = find_union(parent, m);
@@ -29,7 +32,11 @@ void make_union(int parent[], int n, int m)
     {
         parent[a] = b;
     }
+
 }
+
+
+
 
 int main()
 {
