@@ -14,19 +14,17 @@ int main()
     //cout << phone_number.length(); // phone_number의 길이를 구하기 string.length();
 
     //================프로그래머스 창에 복사 붙혀넣기 하기 (정답)===================
-    int start = phone_number.length() - 4; 
+    int len = phone_number.length() - 4; 
 
-    for (int i = 0; i < phone_number.length()-4; i++) 
+    for (int i = 0; i < len; i++) 
     {
         answer = answer + "*";
 
     }
 
-    for (int i = 0; i < 4; i++) 
+    for (int i = len; i < phone_number.size(); i++) 
     {
-        answer = answer + phone_number[start];
-        start++;
-
+        answer = answer + phone_number[i];
     }
 
     //=========================================================================================
