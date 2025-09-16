@@ -27,5 +27,11 @@
     <ClCompile Include="프로그래머스 예산.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="프로그래머스_숫자 문자열과 영단어_2.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="프로그래머스_숫자 문자열과 영단어_1.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
