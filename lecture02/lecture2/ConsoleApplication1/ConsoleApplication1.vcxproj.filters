@@ -21,7 +21,7 @@
     <ClCompile Include="bubblesort_cout제거.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="프로그래머스 과일장수.cpp">
+    <ClCompile Include="프로그래머스 과일장수%28push_pop버전%29.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="프로그래머스 예산.cpp">
@@ -31,6 +31,9 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="프로그래머스_숫자 문자열과 영단어_1.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="프로그래머스_과일장수(쉬운버전).cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
