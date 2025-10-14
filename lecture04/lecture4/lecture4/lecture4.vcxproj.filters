@@ -18,19 +18,10 @@
     <ClCompile Include="프로그래머스 전화번호 목록.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="sutda.cpp">
+    <ClCompile Include="unordered_map연습.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="pt.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="test12.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="test11.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="test3cpp.cpp">
+    <ClCompile Include="프로그래머스_의상.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
