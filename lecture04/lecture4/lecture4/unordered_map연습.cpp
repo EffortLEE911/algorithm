@@ -24,17 +24,36 @@ int main()
 	cout << endl;
 
 	//체이닝
-	unordered_map<string, vector<string>> chaning;
+	unordered_map<string, vector<string>> chaining;
+	vector<string> keys_chaining;
 
-	chaning["contry"].push_back("korea");
-	chaning["contry"].push_back("USA");
-	chaning["contry"].push_back("japan");
+	chaining["contry"].push_back("korea");
+	chaining["contry"].push_back("USA");
+	chaining["contry"].push_back("japan");
 
-	for (int i = 0; i < chaning["contry"].size(); i++)
+	chaining["name"].push_back("lee");
+	chaining["name"].push_back("kim");
+	chaining["name"].push_back("park");
+
+	//key값 저장.
+	for (auto it = chaining.begin(); it != chaining.end(); it++)
 	{
-		cout << chaning["contry"][i] << " ";
+		keys_chaining.push_back(it->first);
 	}
-	cout << endl;
+
+	cout << chaining[keys_chaining[1]][2] << endl;
+	
+	//key값을 활용해 chaing에 저장된 값 불러오기
+	for (int i = 0; i < keys_chaining.size(); i++)
+	{
+		for (int j = 0; j < chaining[keys_chaining[i]].size(); j++)
+		{
+			cout << chaining[keys_chaining[i]][j] << " ";
+		}
+		cout << endl;
+		
+	}
+
 
 }
 
