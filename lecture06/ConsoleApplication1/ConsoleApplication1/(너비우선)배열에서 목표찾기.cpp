@@ -1,6 +1,6 @@
 #include <iostream>
 #include <vector>
-#include <queue>
+#include <deque>
 
 using namespace std;
 int arr[9]; // 길
@@ -19,12 +19,12 @@ int main() {
 
 	int d_x[2] = { -1, +1 }; // 좌 우 이동 
 
-	queue<int> q;
+	deque<int> q;
 
 	int dinosaur = 3;
 	int apple = 8;
 
-	q.push(dinosaur);
+	q.push_back(dinosaur);
 	visited[dinosaur] = 1;
 
 	int next_x;
@@ -35,7 +35,7 @@ int main() {
 
 		dinosaur = q.front();
 
-		q.pop();
+		q.pop_front();
 
 		cout << "현재 공룡의 위치는 " << dinosaur << endl;
 		if (dinosaur == apple) {
@@ -48,7 +48,7 @@ int main() {
 			if (next_x >= 0 && next_x <= 8) {	//다음 이동범위가 배열 안에 존재할 수 있는가 체크
 				if (visited[next_x] == 0 && arr[next_x] == 1) {	//다음 이동이 방문하지 않았고,
 																//길이 연결되어 있는가 체크
-					q.push(next_x);
+					q.push_back(next_x);
 					visited[next_x] = 1;
 					cout << "값이 q에 들어갔습니다 : " << next_x << endl;
 
