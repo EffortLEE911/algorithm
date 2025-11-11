@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="피나치.cpp">
+    <ClCompile Include="피보나치.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="N과M.cpp">
@@ -27,10 +27,10 @@
     <ClCompile Include="백준_바이러스.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="프로그래머스_게임맵최단거리.cpp">
+    <ClCompile Include="%28DFS_재귀활용%29게임맵최단거리.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="test.cpp">
+    <ClCompile Include="%28DFS_stack활용%29게임맵최단거리.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

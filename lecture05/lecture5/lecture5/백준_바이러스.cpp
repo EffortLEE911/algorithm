@@ -51,10 +51,11 @@ void DFS(int k) {
 
 	cout << "현재 정점은" << k << endl;
 
-	cnt++;
+
 	for (int i = 1; i <= c_num; i++) {
 		if (visited[i] != 1 && arr[k][i] == 1) {
 
+			cnt++;
 			DFS(i);
 
 

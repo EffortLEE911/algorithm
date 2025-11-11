@@ -21,27 +21,27 @@ int main() {
 	vector<vector<int>>maps = { {1, 0, 1, 1, 1},
 								{1, 0, 1, 0, 1},
 								{1, 0, 1, 1, 1},
-								{1, 1, 1, 0, 0},
+								{1, 1, 1, 0, 1},
 								{0, 0, 0, 0, 1}};
 		
-	int answer = -1;
-	//for (int i = 0; i < maps.size(); i++) {
-	//	for (int j = 0; j < maps[0].size(); j++) {
-	//		cout << maps[i][j] << " ";
-	//	}
-	//	cout << endl;
-	//}
+	int answer = 0;
+
 	visited[0][0] = 1;
 
-	int y_len = maps.size();
-	int x_len = maps[0].size();
-	visited[y_len - 1][x_len - 1] = -1;
+	int y_len = maps.size()-1;
+	int x_len = maps[0].size()-1;
 
 
 	dfs(0, 0, maps);
 
-	answer = visited[y_len - 1][x_len - 1];
-
+	if (visited[y_len][x_len] == 0)
+	{
+		answer = -1;
+	}
+	else
+	{
+		answer = visited[y_len][x_len];
+	}
 	
 	cout << answer << endl;
 	
@@ -59,12 +59,8 @@ int main() {
 
 void dfs(int y, int x, vector<vector<int>>maps) {
 
-	int d_y[4] = { 1, 0, -1, 0 };
+	int d_y[4] = { -1, 0, 1, 0 };
 	int d_x[4] = { 0, 1, 0, -1 };
-
-	cout << "현재 x는 " << x << endl;
-	cout << "현재 y는 " << y << endl;
-	cout << "현재 값은 " << visited[y][x] << endl << endl;
 	
 	for (int i = 0; i < 4; i++) 
 	{
@@ -75,7 +71,7 @@ void dfs(int y, int x, vector<vector<int>>maps) {
 
 
 		if ((next_y >= 0 && next_y<maps.size()) && (next_x >= 0 && next_x<maps.size())) {
-			if (maps[next_y][next_x] == 1 && (visited[next_y][next_x] == 0 || visited[next_y][next_x] == -1))
+			if (maps[next_y][next_x] == 1 && (visited[next_y][next_x] == 0 ))
 			{
 				visited[next_y][next_x] = visited[y][x] + 1;
 				dfs(next_y, next_x, maps);
