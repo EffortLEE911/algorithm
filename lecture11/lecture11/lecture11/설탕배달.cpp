@@ -21,19 +21,15 @@ int main() {
 	arr[10] = 2;
 	arr[11] = 3;
 	arr[12] = 4;
+	arr[13] = 3;
+	arr[14] = 4;
+	arr[15] = 3;
+
 
 	int a = 0;
-	int b = 0;
-	for (int i = 13; i < 5001; i++) {
-		a = arr[i - 3];
-		b = arr[i - 5];
 
-		if (a > b) {
-			arr[i] = b + 1;
-		}
-		else {
-			arr[i] = a + 1;
-		}
+	for (int i = 11; i < 5001 - 5; i++) {
+		arr[i + 5] = arr[i] + 1;
 
 	}
 	cin >> N;
