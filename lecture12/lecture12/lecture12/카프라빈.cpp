@@ -47,26 +47,19 @@ int main()
  
         if (parent_hash == target_hash)
         {
-            bool is_same = true;
-            
-            for (int j = 0; j < target.size(); j++) 
-            {
-                if (parent[i + j] != target[j])
-                {
-                    is_same = false;
-                    break;
 
-                }
+            string tmp = parent.substr(i, target.size());
 
-            }
-            if (!is_same) 
-            {
-                cout << "hash값은 같으나 문자열이 다릅니다." << endl;
-            }
-            else if(is_same) 
+            if (tmp == target)
             {
                 cout << i << " 번째에 같은 문자열이 있습니다." << endl;
             }
+            else
+            {
+                cout << "hash값은 같으나 문자열이 다릅니다." << endl;
+            }
+
+  
         }
 
     }
